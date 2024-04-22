@@ -1,14 +1,13 @@
 services:
   mongodb:
     image: mongo
-    container_image: mongo_db
     ports:
       - 27017:27017
     volumes:
       - mongo:/data
     environment:
-      - MONGO_INITDB_ROOT_USERNAME= chatbotuda
-      - MONGO_INITDB_ROOT_PASSWORD= 4d9FusJtvErUbw68**
+      - MONGO_INITDB_ROOT_USERNAME=chatbotuda
+      - MONGO_INITDB_ROOT_PASSWORD=4d9FusJtvErUbw68
   mongo-express:
     image: mongo-express
     container_name: mongo_express
@@ -16,8 +15,8 @@ services:
     ports:
       - 8081:8081
     environment:
-      - ME_CONFIG_MONGODB_ADMINUSERNAME= chatbotuda
-      - ME_CONFIG_MONGODB_ADMINPASSWORD= 4d9FusJtvErUbw68**
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=chatbotuda
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=4d9FusJtvErUbw68
       - ME_CONFIG_MONGODB_SERVER=mongodb
 volumes:
   mongo: {}

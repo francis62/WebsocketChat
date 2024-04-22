@@ -28,8 +28,17 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.mongodb:mongodb-driver-sync:5.0.1'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+tasks.jar {
+	enabled = true
+}
+
+bootJar {
+	enabled = true
 }
